@@ -10,13 +10,14 @@
 
 @media (max-width: 1088px) {
   main {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     .description {
       width: 100% !important;
       padding-right: 0 !important;
       margin-bottom: 5rem;
       h1 {
+        font-size: 5rem !important;
         text-align: center;
       }
       p {
@@ -28,6 +29,7 @@
       }
       .description-logo-container {
         justify-content: center;
+        margin-top: 3rem !important;
       }
     }
   }

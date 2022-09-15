@@ -13,7 +13,7 @@
 }
 @media (max-width: 1088px) {
   main {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
   main .description {
@@ -22,6 +22,7 @@
     margin-bottom: 5rem;
   }
   main .description h1 {
+    font-size: 5rem !important;
     text-align: center;
   }
   main .description p {
@@ -33,6 +34,7 @@
   }
   main .description .description-logo-container {
     justify-content: center;
+    margin-top: 3rem !important;
   }
 }
 body {
