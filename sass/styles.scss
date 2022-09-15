@@ -1,2 +1,76 @@
 @use './default' as *;
 @use './vars' as *;
+@use './mixins' as *;
+
+body {
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  padding: 1rem;
+  font-size: $default-font-size;
+  color: $medium-gray;
+  cursor: pointer;
+  .snap-logo {
+    margin-right: 3rem;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .about {
+    margin-right: auto;
+  }
+  button {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    cursor: inherit;
+  }
+  .register-btn {
+    border: 2px solid $medium-gray;
+    border-radius: 20px;
+    @include btn-padding(0.75rem, 1.5rem);
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  .description {
+    width: 55%;
+    h1 {
+      font-size: 7rem;
+      margin-top: 7rem;
+    }
+    p {
+      font-size: $default-font-size;
+      color: $medium-gray;
+      margin: 3rem 0;
+    }
+    button {
+      font-size: $default-font-size;
+      background-color: $almost-black;
+      color: $almost-white;
+      @include btn-padding(0.75rem, 1.5rem);
+      border-radius: 10px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .description-logo-container {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+      margin-top: 7rem;
+    }
+  }
+  .large-image {
+    width: clamp(400px, 60%, 550px);
+  }
+}
