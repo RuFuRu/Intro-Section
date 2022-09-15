@@ -1,0 +1,34 @@
+@media (max-width: 1365px) {
+  main {
+    .description {
+      .description-logo-container {
+        margin-top: 5rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1088px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    .description {
+      width: 100% !important;
+      padding-right: 0 !important;
+      margin-bottom: 5rem;
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      .btn-container {
+        display: flex;
+        justify-content: center;
+      }
+      .description-logo-container {
+        justify-content: center;
+      }
+    }
+  }
+}
