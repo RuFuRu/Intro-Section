@@ -2,6 +2,7 @@
 @use './vars' as *;
 @use './mixins' as *;
 @use './media-queries' as *;
+@use './hamburger-menu' as *;
 
 body {
   padding: 1rem;
