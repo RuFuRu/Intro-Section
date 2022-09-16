@@ -34,3 +34,28 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .features {
+    display: none;
+  }
+  .company {
+    @extend .features;
+  }
+  .careers {
+   @extend .features;
+  }
+  .about {
+    @extend .features;
+  }
+  .login {
+    @extend .features;
+  }
+  .register {
+    @extend .features;
+  }
+  .hamburger-menu {
+    display: block !important;
+    margin-left: auto;
+  }
+}

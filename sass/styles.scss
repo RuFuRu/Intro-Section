@@ -37,6 +37,9 @@ nav {
     border-radius: 20px;
     @include btn-padding(0.75rem, 1.5rem);
   }
+  .hamburger-menu {
+    display: none;
+  }
 }
 
 main {

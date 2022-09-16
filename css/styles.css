@@ -37,6 +37,16 @@
     margin-top: 3rem !important;
   }
 }
+@media (max-width: 1000px) {
+  .features, .register, .login, .about, .careers, .company {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block !important;
+    margin-left: auto;
+  }
+}
 body {
   padding: 1rem;
 }
@@ -71,6 +81,9 @@ nav .register-btn {
   border: 2px solid hsl(0deg, 0%, 41%);
   border-radius: 20px;
   padding: 0.75rem 1.5rem;
+}
+nav .hamburger-menu {
+  display: none;
 }
 
 main {
