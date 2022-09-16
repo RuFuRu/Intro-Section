@@ -69,13 +69,15 @@ main {
       cursor: pointer;
     }
     .description-logo-container {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 110px);
       align-items: center;
       column-gap: 40px;
       margin-top: 7rem;
+      height: 100px;
     }
   }
   .large-image {
-    width: clamp(530px, 60%, 550px);
+    width: clamp(375px, 60%, 550px);
   }
 }
