@@ -16,4 +16,14 @@
   background-color: white;
   width: 60%;
   height: 100%;
+  padding: 1rem;
+}
+
+.exit {
+  display: flex;
+  justify-content: right;
+}
+
+ol {
+  list-style-type: none;
 }
