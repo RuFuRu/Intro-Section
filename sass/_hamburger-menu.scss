@@ -23,7 +23,6 @@
   width: 60%;
   height: 100%;
   padding: 1rem;
-  transition: ease-in 1s;
 }
 
 .active {
@@ -42,7 +41,16 @@ ol {
   font-size: 18px;
   color: $medium-gray;
   li {
-    padding: 0.75rem 0.3rem;
+    @include up-down-padding(0.75rem, 0.3rem)
+  }
+}
+
+.sub-list {
+  padding: 1rem;
+  li {
+    img {
+      margin-right: 0.75rem;
+    }
   }
 }
 
@@ -62,6 +70,6 @@ ol {
   .register-btn {
     border: 2px solid $medium-gray;
     border-radius: 20px;
-    @include btn-padding(0.75rem, 1.5rem);
+    @include up-down-padding(0.75rem, 1.5rem);
   }
 }
