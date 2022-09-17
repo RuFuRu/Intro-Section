@@ -10,7 +10,7 @@ console.log(clickableList);
 hamburgerMenu.addEventListener('click', () => {
   hamMenu.classList.toggle('active');
   overlay.classList.toggle('active');
-  hamMenu.animate(animationSpecOpen, animationTiming);
+  animateSth('width','0%','60%',100,1,hamMenu);
 });
 
 hamMenuExit.addEventListener('click', () => {
@@ -18,25 +18,54 @@ hamMenuExit.addEventListener('click', () => {
   overlay.classList.toggle('active');
 });
 
+let clicker: number = 2;
+
 clickableList.forEach(listItem => {
   listItem.addEventListener('click' , () => {
     const subList1 = document.querySelector('.sl1') as HTMLElement;
     const subList2 = document.querySelector('.sl2') as HTMLElement;
     if(listItem.classList.contains('cl1')) {
       subList1.classList.toggle('active');
+      const image = document.querySelector('.cl1-image') as HTMLElement;
+      changeImg(image);
     } else if(listItem.classList.contains('cl2')) {
       subList2.classList.toggle('active');
+      const image = document.querySelector('.cl2-image') as HTMLElement;
+      changeImg(image);
     }
   })
 })
 
 
-const animationSpecOpen = [
-  {width: '0%'},
-  {width: '60%'}
-];
+function changeImg(image: HTMLElement) {
+  if(clicker % 2 === 0) {
+    image.setAttribute('src', 'images/icon-arrow-down.svg');
+    clicker++;
+  } else if(clicker % 2 !== 0) {
+    image.setAttribute('src', 'images/icon-arrow-up.svg');
+    clicker++;
+  }
+}
 
-const animationTiming = {
-  duration: 100,
-  iterations: 1
-};
+function animateSth
+  (
+    property: string,
+    valueStart: string,
+    valueFinish: string,
+    duration: number, 
+    iterations: number,
+    element: HTMLElement
+  ) 
+  {
+    const animationOpen = [
+      {[property]: valueStart},
+      {[property]: valueFinish}
+    ];
+
+    const animationClose = {
+      duration: duration,
+      iterations: iterations
+    };
+
+    element.animate(animationOpen, animationClose);
+  }
