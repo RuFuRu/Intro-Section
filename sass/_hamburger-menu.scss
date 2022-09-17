@@ -11,7 +11,6 @@
   top: 0;
   bottom: 0;
   background-color: hsla(0,0%,0%, 0.5);
-  pointer-events: none;
 }
 
 .ham-menu {
@@ -23,10 +22,12 @@
   width: 60%;
   height: 100%;
   padding: 1rem;
+  overflow-y: auto;
 }
 
+
 .active {
-  display: block;
+  display: block !important;
 }
 
 .exit {
@@ -45,7 +46,13 @@ ol {
   }
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .sub-list {
+  display: none;
   padding: 1rem;
   li {
     img {
