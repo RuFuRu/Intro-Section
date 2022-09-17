@@ -1,3 +1,6 @@
+@use './vars' as *;
+@use './mixins' as *;
+
 .overlay {
   display: block;
   position: fixed;
@@ -22,8 +25,34 @@
 .exit {
   display: flex;
   justify-content: right;
+  cursor: pointer;
 }
 
 ol {
   list-style-type: none;
+  font-size: 18px;
+  color: $medium-gray;
+  li {
+    padding: 0.75rem 0.3rem;
+  }
+}
+
+.ham-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  row-gap: 1rem;
+  button {
+    border: none;
+    background-color: inherit;
+    color: $medium-gray;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .register-btn {
+    border: 2px solid $medium-gray;
+    border-radius: 20px;
+    @include btn-padding(0.75rem, 1.5rem);
+  }
 }
