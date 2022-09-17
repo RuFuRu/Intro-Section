@@ -14,7 +14,6 @@ hamMenuExit.addEventListener('click', () => {
     hamMenu.classList.toggle('active');
     overlay.classList.toggle('active');
 });
-let clicker = 2;
 clickableList.forEach(listItem => {
     listItem.addEventListener('click', () => {
         const subList1 = document.querySelector('.sl1');
@@ -28,17 +27,16 @@ clickableList.forEach(listItem => {
             subList2.classList.toggle('active');
             const image = document.querySelector('.cl2-image');
             changeImg(image);
+            console.log(image.getAttribute('src'));
         }
     });
 });
 function changeImg(image) {
-    if (clicker % 2 === 0) {
-        image.setAttribute('src', 'images/icon-arrow-down.svg');
-        clicker++;
-    }
-    else if (clicker % 2 !== 0) {
+    if (image.getAttribute('src') === 'images/icon-arrow-down.svg') {
         image.setAttribute('src', 'images/icon-arrow-up.svg');
-        clicker++;
+    }
+    else if (image.getAttribute('src') === 'images/icon-arrow-up.svg') {
+        image.setAttribute('src', 'images/icon-arrow-down.svg');
     }
 }
 function animateSth(property, valueStart, valueFinish, duration, iterations, element) {

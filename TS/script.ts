@@ -18,32 +18,29 @@ hamMenuExit.addEventListener('click', () => {
   overlay.classList.toggle('active');
 });
 
-let clicker: number = 2;
-
 clickableList.forEach(listItem => {
   listItem.addEventListener('click' , () => {
     const subList1 = document.querySelector('.sl1') as HTMLElement;
     const subList2 = document.querySelector('.sl2') as HTMLElement;
     if(listItem.classList.contains('cl1')) {
       subList1.classList.toggle('active');
-      const image = document.querySelector('.cl1-image') as HTMLElement;
+      const image = document.querySelector('.cl1-image') as HTMLImageElement;
       changeImg(image);
     } else if(listItem.classList.contains('cl2')) {
       subList2.classList.toggle('active');
-      const image = document.querySelector('.cl2-image') as HTMLElement;
+      const image = document.querySelector('.cl2-image') as HTMLImageElement;
       changeImg(image);
+      console.log(image.getAttribute('src'));
     }
   })
 })
 
 
-function changeImg(image: HTMLElement) {
-  if(clicker % 2 === 0) {
-    image.setAttribute('src', 'images/icon-arrow-down.svg');
-    clicker++;
-  } else if(clicker % 2 !== 0) {
+function changeImg(image: HTMLImageElement) {
+  if(image.getAttribute('src') === 'images/icon-arrow-down.svg') {
     image.setAttribute('src', 'images/icon-arrow-up.svg');
-    clicker++;
+  } else if(image.getAttribute('src') === 'images/icon-arrow-up.svg') {
+    image.setAttribute('src', 'images/icon-arrow-down.svg');
   }
 }
 
