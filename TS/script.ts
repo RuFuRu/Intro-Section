@@ -3,9 +3,22 @@ const overlay = document.querySelector('.overlay') as HTMLElement;
 const hamMenu = document.querySelector('.ham-menu') as HTMLElement;
 const hamMenuExit = document.querySelector('.exit') as HTMLElement;
 const clickableList = document.querySelectorAll('.clickable-list');
- 
-console.log(clickableList);
+const featuresNav = document.querySelector('nav > .features') as HTMLElement;
+const companyNav = document.querySelector('nav > .company') as HTMLElement;
+const featuresList = document.querySelector('.features-list') as HTMLElement;
+const companyList = document.querySelector('.company-list') as HTMLElement;
 
+featuresNav.addEventListener('click', () => {
+  featuresList.classList.toggle('active');
+  const image = document.querySelector('.image-features') as HTMLImageElement;
+  changeImg(image);
+})
+
+companyNav.addEventListener('click', () => {
+  companyList.classList.toggle('active');
+  const image = document.querySelector('.image-company') as HTMLImageElement;
+  changeImg(image);
+})
 
 hamburgerMenu.addEventListener('click', () => {
   hamMenu.classList.toggle('active');
@@ -30,7 +43,6 @@ clickableList.forEach(listItem => {
       subList2.classList.toggle('active');
       const image = document.querySelector('.cl2-image') as HTMLImageElement;
       changeImg(image);
-      console.log(image.getAttribute('src'));
     }
   })
 })

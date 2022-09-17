@@ -4,7 +4,20 @@ const overlay = document.querySelector('.overlay');
 const hamMenu = document.querySelector('.ham-menu');
 const hamMenuExit = document.querySelector('.exit');
 const clickableList = document.querySelectorAll('.clickable-list');
-console.log(clickableList);
+const featuresNav = document.querySelector('nav > .features');
+const companyNav = document.querySelector('nav > .company');
+const featuresList = document.querySelector('.features-list');
+const companyList = document.querySelector('.company-list');
+featuresNav.addEventListener('click', () => {
+    featuresList.classList.toggle('active');
+    const image = document.querySelector('.image-features');
+    changeImg(image);
+});
+companyNav.addEventListener('click', () => {
+    companyList.classList.toggle('active');
+    const image = document.querySelector('.image-company');
+    changeImg(image);
+});
 hamburgerMenu.addEventListener('click', () => {
     hamMenu.classList.toggle('active');
     overlay.classList.toggle('active');
@@ -27,7 +40,6 @@ clickableList.forEach(listItem => {
             subList2.classList.toggle('active');
             const image = document.querySelector('.cl2-image');
             changeImg(image);
-            console.log(image.getAttribute('src'));
         }
     });
 });

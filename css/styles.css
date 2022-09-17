@@ -127,8 +127,33 @@ a {
   padding: 0.75rem 1.5rem;
 }
 
+.features-list {
+  display: none;
+  position: fixed;
+  height: 220px;
+  width: 170px;
+  top: 100px;
+  left: 125px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.company-list {
+  display: none;
+  position: fixed;
+  height: 175px;
+  width: 170px;
+  top: 100px;
+  left: 335px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 body {
   padding: 1rem;
+  background-color: hsl(0deg, 0%, 98%);
 }
 
 nav {
