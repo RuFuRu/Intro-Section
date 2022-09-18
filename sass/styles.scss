@@ -4,6 +4,7 @@
 @use './media-queries' as *;
 @use './hamburger-menu' as *;
 @use './active_desktop-state' as *;
+@use './hovers' as *;
 
 body {
   padding: 1rem;

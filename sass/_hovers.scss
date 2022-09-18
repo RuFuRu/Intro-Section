@@ -1,0 +1,29 @@
+@use './vars' as *;
+
+.features:hover, .company:hover, .careers:hover,
+.about:hover, .login:hover {
+  color: $almost-black;
+}
+
+.register:hover {
+  .register-btn {
+    border-color: $almost-black;
+    color: $almost-black;
+  }
+}
+
+.btn-container > button:hover {
+  background-color: $almost-white;
+  color: $almost-black;
+  border: 2px solid $almost-black;
+}
+
+.cl1:hover, .cl2:hover, .ham-careers:hover,
+.ham-about:hover, .ham-btns > button:first-child:hover{
+  @extend .features, :hover
+}
+
+.register-btn:hover {
+  border-color: $almost-black;
+  color: $almost-black;
+}

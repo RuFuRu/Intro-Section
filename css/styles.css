@@ -151,6 +151,28 @@ a {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.features:hover, .cl1:hover, .cl2:hover, .ham-careers:hover,
+.ham-about:hover, .ham-btns > button:hover:first-child, .company:hover, .careers:hover,
+.about:hover, .login:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+
+.register:hover .register-btn, .ham-btns > button.register:first-child:hover .register-btn {
+  border-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 8%);
+}
+
+.btn-container > button:hover, .ham-btns.btn-container > button:first-child:hover {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 8%);
+  border: 2px solid hsl(0deg, 0%, 8%);
+}
+
+.register-btn:hover, .ham-btns > button.register-btn:first-child:hover {
+  border-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 8%);
+}
+
 body {
   padding: 1rem;
   background-color: hsl(0deg, 0%, 98%);
