@@ -52,13 +52,13 @@ function changeImg(image) {
     }
 }
 function animateSth(property, valueStart, valueFinish, duration, iterations, element) {
-    const animationOpen = [
+    const animationProps = [
         { [property]: valueStart },
         { [property]: valueFinish }
     ];
-    const animationClose = {
+    const animationSpecs = {
         duration: duration,
         iterations: iterations
     };
-    element.animate(animationOpen, animationClose);
+    element.animate(animationProps, animationSpecs);
 }

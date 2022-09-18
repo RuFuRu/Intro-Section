@@ -56,25 +56,17 @@ function changeImg(image: HTMLImageElement) {
   }
 }
 
-function animateSth
-  (
-    property: string,
-    valueStart: string,
-    valueFinish: string,
-    duration: number, 
-    iterations: number,
-    element: HTMLElement
-  ) 
+function animateSth(property: string, valueStart: string, valueFinish: string, duration: number, iterations: number, element: HTMLElement) 
   {
-    const animationOpen = [
+    const animationProps = [
       {[property]: valueStart},
       {[property]: valueFinish}
     ];
 
-    const animationClose = {
+    const animationSpecs = {
       duration: duration,
       iterations: iterations
     };
 
-    element.animate(animationOpen, animationClose);
+    element.animate(animationProps, animationSpecs);
   }
